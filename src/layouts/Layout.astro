@@ -1,44 +1,165 @@
 ---
+import '@fontsource/space-grotesk/300.css';
+import '@fontsource/space-grotesk/400.css';
+import '@fontsource/space-grotesk/500.css';
+import '@fontsource/space-grotesk/600.css';
+import '@fontsource/space-grotesk/700.css';
+
 interface Props {
   title: string;
+  description?: string;
 }
 
-const { title } = Astro.props;
+const { 
+  title = "Ghostwriter Business | Premium Ghostwriting Services for Authors & Entrepreneurs",
+  description = "Professional ghostwriting services for books, articles, speeches, and business content. Transform your ideas into compelling written works with our expert ghostwriters."
+} = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="My personal blog" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content="ghostwriting, book writing, content creation, professional writer, ghostwriter for hire, business writing" />
+    <meta name="author" content="Ghostwriter Business" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content="https://www.ghostwriter.business" />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://www.ghostwriter.business" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    
+    <style is:global>
+      body {
+        font-family: 'Space Grotesk', sans-serif;
+        background-color: #0f0f1a;
+        color: #e0e0e0;
+        overflow-x: hidden;
+      }
+      
+      .gradient-text {
+        background: linear-gradient(90deg, #8e2de2, #4a00e0);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      
+      .astro-bg {
+        background: radial-gradient(circle at center, #1a1a2e 0%, #0f0f1a 70%);
+      }
+      
+      .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 25px -5px rgba(138, 43, 226, 0.3);
+      }
+      
+      .floating {
+        animation: floating 6s ease-in-out infinite;
+      }
+      
+      @keyframes floating {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-15px); }
+        100% { transform: translateY(0px); }
+      }
+      
+      .pulse {
+        animation: pulse 2s infinite;
+      }
+      
+      @keyframes pulse {
+        0% { box-shadow: 0 0 0 0 rgba(138, 43, 226, 0.7); }
+        70% { box-shadow: 0 0 0 15px rgba(138, 43, 226, 0); }
+        100% { box-shadow: 0 0 0 0 rgba(138, 43, 226, 0); }
+      }
+      
+      .typewriter {
+        overflow: hidden;
+        border-right: .15em solid #8e2de2;
+        white-space: nowrap;
+        margin: 0 auto;
+        letter-spacing: .15em;
+        animation: 
+          typing 3.5s steps(40, end),
+          blink-caret .75s step-end infinite;
+      }
+      
+      @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+      }
+      
+      @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: #8e2de2; }
+      }
+      
+      .parallax {
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    </style>
   </head>
-  <body class="bg-gray-50">
-    <nav class="bg-white shadow-sm">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16">
-          <div class="flex">
-            <div class="flex-shrink-0 flex items-center">
-              <a href="/" class="text-2xl font-bold text-gray-900">My Blog</a>
-            </div>
-            <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
-              <a href="/" class="text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 border-transparent hover:border-gray-300">Home</a>
-              <a href="/blog" class="text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 border-transparent hover:border-gray-300">Blog</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </nav>
-    <main>
-      <slot />
-    </main>
-    <footer class="bg-white mt-12">
-      <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-        <p class="text-center text-gray-500">© 2023 My Blog. All rights reserved.</p>
-      </div>
-    </footer>
+  <body class="astro-bg">
+    <slot />
+    
+    <script>
+      // Mobile menu toggle
+      document.getElementById('mobile-menu-button')?.addEventListener('click', function() {
+        const menu = document.getElementById('mobile-menu');
+        menu?.classList.toggle('hidden');
+      });
+
+      // FAQ toggle functionality
+      document.querySelectorAll('.faq-toggle').forEach(button => {
+        button.addEventListener('click', () => {
+          const faqContent = button.nextElementSibling;
+          const icon = button.querySelector('i');
+          
+          faqContent?.classList.toggle('hidden');
+          icon?.classList.toggle('rotate-180');
+        });
+      });
+
+      // Form submission
+      document.getElementById('contact-form')?.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const name = (document.getElementById('name') as HTMLInputElement)?.value;
+        const email = (document.getElementById('email') as HTMLInputElement)?.value;
+        
+        alert(`Thank you, ${name}! Your message has been received. I'll get back to you soon at ${email}.`);
+        
+        (this as HTMLFormElement).reset();
+      });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          
+          const targetId = this.getAttribute('href');
+          if (targetId === '#') return;
+          
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            targetElement.scrollIntoView({
+              behavior: 'smooth'
+            });
+            
+            // Close mobile menu if open
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+              mobileMenu.classList.add('hidden');
+            }
+          }
+        });
+      });
+    </script>
   </body>
 </html>
