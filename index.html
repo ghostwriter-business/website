@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghostwriter Business | Premium Ghostwriting Services for Authors & Entrepreneurs</title>
+    <meta name="description" content="Professional ghostwriting services for books, articles, speeches, and business content. Transform your ideas into compelling written works with our expert ghostwriters.">
+    <meta name="keywords" content="ghostwriting, book writing, content creation, professional writer, ghostwriter for hire, business writing">
+    <meta name="author" content="Ghostwriter Business">
+    <meta property="og:title" content="Ghostwriter Business | Premium Ghostwriting Services">
+    <meta property="og:description" content="Professional ghostwriting services for authors and business professionals.">
+    <meta property="og:url" content="https://www.ghostwriter.business">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://www.ghostwriter.business">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: #0f0f1a;
+            color: #e0e0e0;
+            overflow-x: hidden;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, #8e2de2, #4a00e0);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .astro-bg {
+            background: radial-gradient(circle at center, #1a1a2e 0%, #0f0f1a 70%);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(138, 43, 226, 0.3);
+        }
+        
+        .floating {
+            animation: floating 6s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(138, 43, 226, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(138, 43, 226, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(138, 43, 226, 0); }
+        }
+        
+        .typewriter {
+            overflow: hidden;
+            border-right: .15em solid #8e2de2;
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: .15em;
+            animation: 
+                typing 3.5s steps(40, end),
+                blink-caret .75s step-end infinite;
+        }
+        
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #8e2de2; }
+        }
+        
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body class="astro-bg">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-black bg-opacity-80 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="https://www.ghostwriter.business" class="flex items-center space-x-2">
+                        <i class="fas fa-meteor text-purple-500 text-2xl"></i>
+                        <span class="text-white text-xl font-bold">Ghostwriter<span class="gradient-text">Business</span></span>
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-8">
+                        <a href="#services" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300">Services</a>
+                        <a href="#portfolio" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300">Portfolio</a>
+                        <a href="#process" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300">Process</a>
+                        <a href="#testimonials" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300">Testimonials</a>
+                        <a href="#contact" class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-full text-sm font-medium transition duration-300">Get Started</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-300 hover:text-white focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-900">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#services" class="text-gray-300 hover:bg-gray-800 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Services</a>
+                <a href="#portfolio" class="text-gray-300 hover:bg-gray-800 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Portfolio</a>
+                <a href="#process" class="text-gray-300 hover:bg-gray-800 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Process</a>
+                <a href="#testimonials" class="text-gray-300 hover:bg-gray-800 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Testimonials</a>
+                <a href="#contact" class="bg-purple-600 hover:bg-purple-700 text-white block px-3 py-2 rounded-md text-base font-medium text-center">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-12 md:mb-0">
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">
+                    <span class="gradient-text">Ghostwriting</span> That <br> 
+                    <span class="text-white">Transcends</span> The <br>
+                    <span class="gradient-text">Cosmos</span>
+                </h1>
+                <p class="text-lg text-gray-300 mb-8 max-w-lg">
+                    Your ideas deserve words that shine brighter than the Milky Way. 
+                    As your cosmic ghostwriter, I'll craft content that launches your 
+                    message into orbit.
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#contact" class="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition duration-300 text-center">
+                        Book a Free Consultation
+                    </a>
+                    <a href="#portfolio" class="border border-purple-500 text-purple-400 hover:bg-purple-900 hover:bg-opacity-30 px-8 py-4 rounded-full text-lg font-semibold transition duration-300 text-center">
+                        View My Work
+                    </a>
+                </div>
+                <div class="mt-8 flex items-center space-x-4">
+                    <div class="flex -space-x-2">
+                        <img class="w-10 h-10 rounded-full border-2 border-purple-500" src="https://randomuser.me/api/portraits/women/32.jpg" alt="Client">
+                        <img class="w-10 h-10 rounded-full border-2 border-purple-500" src="https://randomuser.me/api/portraits/men/75.jpg" alt="Client">
+                        <img class="w-10 h-10 rounded-full border-2 border-purple-500" src="https://randomuser.me/api/portraits/women/90.jpg" alt="Client">
+                    </div>
+                    <div>
+                        <p class="text-sm text-gray-400">Trusted by <span class="font-bold text-white">200+</span> clients worldwide</p>
+                        <div class="flex">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <span class="ml-2 text-sm text-gray-400">5.0 (87 reviews)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="md:w-1/2 relative">
+                <div class="relative max-w-md mx-auto">
+                    <div class="absolute -top-10 -left-10 w-32 h-32 bg-purple-500 rounded-full filter blur-3xl opacity-20"></div>
+                    <div class="absolute -bottom-10 -right-10 w-32 h-32 bg-blue-500 rounded-full filter blur-3xl opacity-20"></div>
+                    <img src="https://jacquelinemq.com/wp-content/uploads/2024/01/Acerca-de-la-escritora-Jacqueline-M.Q.webp?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Ghostwriting Services" class="relative z-10 rounded-2xl shadow-2xl w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted By Section -->
+    <section class="py-12 bg-gray-900 bg-opacity-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-center text-gray-400 mb-8">TRUSTED BY INNOVATORS AND VISIONARIES</p>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-8 items-center justify-center">
+                <img src="https://via.placeholder.com/150x60/1a1a2e/8e2de2?text=TechStar" alt="TechStar" class="h-12 opacity-70 hover:opacity-100 transition duration-300 mx-auto">
+                <img src="https://via.placeholder.com/150x60/1a1a2e/8e2de2?text=Quantum" alt="Quantum" class="h-12 opacity-70 hover:opacity-100 transition duration-300 mx-auto">
+                <img src="https://via.placeholder.com/150x60/1a1a2e/8e2de2?text=Nebula" alt="Nebula" class="h-12 opacity-70 hover:opacity-100 transition duration-300 mx-auto">
+                <img src="https://via.placeholder.com/150x60/1a1a2e/8e2de2?text=Galactic" alt="Galactic" class="h-12 opacity-70 hover:opacity-100 transition duration-300 mx-auto">
+                <img src="https://via.placeholder.com/150x60/1a1a2e/8e2de2?text=Orion" alt="Orion" class="h-12 opacity-70 hover:opacity-100 transition duration-300 mx-auto">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <span class="text-purple-500 font-semibold">WHAT I OFFER</span>
+            <h2 class="text-3xl md:text-5xl font-bold mt-4 mb-6">Cosmic-Quality <span class="gradient-text">Ghostwriting</span></h2>
+            <p class="text-lg text-gray-400 max-w-3xl mx-auto">
+                From business books to sci-fi novels, I provide premium ghostwriting services tailored to your unique voice and vision.
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Service Card 1 -->
+            <div class="service-card bg-gray-800 bg-opacity-50 rounded-2xl p-8 transition duration-500 hover:border-purple-500 border border-gray-800">
+                <div class="w-16 h-16 bg-purple-500 bg-opacity-20 rounded-xl flex items-center justify-center mb-6">
+                    <i class="fas fa-book text-purple-500 text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-4">Book Ghostwriting</h3>
+                <p class="text-gray-400 mb-6">
+                    Transform your ideas into a compelling manuscript. Whether it's a memoir, business book, or novel, I'll capture your voice perfectly.
+                </p>
+                <ul class="space-y-3 mb-8">
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-purple-500 mr-3"></i>
+                        <span>Full-length books (40k-100k words)</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-purple-500 mr-3"></i>
+                        <span>Research and interviews included</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-purple-500 mr-3"></i>
+                        <span>Multiple revisions</span>
+                    </li>
+                </ul>
+                <div class="flex items-center justify-between">
+                    <span class="text-2xl font-bold">From $15,000</span>
+                    <a href="#contact" class="text-purple-500 hover:text-purple-400 font-medium">Learn More →</a>
+                </div>
+            </div>
+            
+            <!-- Service Card 2 -->
+            <div class="service-card bg-gray-800 bg-opacity-50 rounded-2xl p-8 transition duration-500 hover:border-purple-500 border border-gray-800">
+                <div class="w-16 h-16 bg-blue-500 bg-opacity-20 rounded-xl flex items-center justify-center mb-6">
+                    <i class="fas fa-briefcase text-blue-400 text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-4">Business Content</h3>
+                <p class="text-gray-400 mb-6">
+                    Elevate your brand with professional business writing - from white papers to thought leadership articles and executive speeches.
+                </p>
+                <ul class="space-y-3 mb-8">
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-blue-400 mr-3"></i>
+                        <span>White papers & case studies</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-blue-400 mr-3"></i>
+                        <span>Blog posts & articles</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-blue-400 mr-3"></i>
+                        <span>Newsletters & email sequences</span>
+                    </li>
+                </ul>
+                <div class="flex items-center justify-between">
+                    <span class="text-2xl font-bold">From $0.25/word</span>
+                    <a href="#contact" class="text-blue-400 hover:text-blue-300 font-medium">Learn More →</a>
+                </div>
+            </div>
+            
+            <!-- Service Card 3 -->
+            <div class="service-card bg-gray-800 bg-opacity-50 rounded-2xl p-8 transition duration-500 hover:border-purple-500 border border-gray-800">
+                <div class="w-16 h-16 bg-pink-500 bg-opacity-20 rounded-xl flex items-center justify-center mb-6">
+                    <i class="fas fa-microphone-alt text-pink-400 text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-4">Speech & Script Writing</h3>
+                <p class="text-gray-400 mb-6">
+                    Captivate your audience with powerful speeches, TED talks, video scripts, and presentation content that resonates.
+                </p>
+                <ul class="space-y-3 mb-8">
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-pink-400 mr-3"></i>
+                        <span>Keynote speeches</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-pink-400 mr-3"></i>
+                        <span>TED-style talks</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-pink-400 mr-3"></i>
+                        <span>Video & podcast scripts</span>
+                    </li>
+                </ul>
+                <div class="flex items-center justify-between">
+                    <span class="text-2xl font-bold">From $1,500/speech</span>
+                    <a href="#contact" class="text-pink-400 hover:text-pink-300 font-medium">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-gray-900 bg-opacity-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-purple-500 font-semibold">MY WORK</span>
+                <h2 class="text-3xl md:text-5xl font-bold mt-4 mb-6">Published <span class="gradient-text">Works</span></h2>
+                <p class="text-lg text-gray-400 max-w-3xl mx-auto">
+                    Here's a glimpse of projects I've ghostwritten that have made an impact in their respective fields.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Portfolio Item 1 -->
+                <div class="bg-gray-800 rounded-2xl overflow-hidden transition duration-500 hover:shadow-xl hover:shadow-purple-500/10">
+                    <div class="h-48 bg-gradient-to-r from-purple-900 to-blue-900 flex items-center justify-center">
+                        <i class="fas fa-book-open text-6xl text-white opacity-30"></i>
+                    </div>
+                    <div class="p-6">
+                        <span class="inline-block px-3 py-1 text-xs font-semibold bg-purple-900 text-purple-200 rounded-full mb-3">Business</span>
+                        <h3 class="text-xl font-bold mb-2">"The Quantum Leader"</h3>
+                        <p class="text-gray-400 mb-4">A groundbreaking business book exploring leadership in the digital age, published under a Fortune 500 CEO's name.</p>
+                        <div class="flex items-center">
+                            <span class="text-sm text-gray-500">Amazon Bestseller</span>
+                            <span class="mx-2 text-gray-600">•</span>
+                            <div class="flex">
+                                <i class="fas fa-star text-yellow-400 text-sm"></i>
+                                <i class="fas fa-star text-yellow-400 text-sm"></i>
+                                <i class="fas fa-star text-yellow-400 text-sm"></i>
+                                <i class="fas fa-star text-yellow-400 text-sm"></i>
+                                <i class="fas fa-star text-yellow-400 text-sm"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 2 -->
+                <div class="bg-gray-800 rounded-2xl overflow-hidden transition duration-500 hover:shadow-xl hover:shadow-blue-500/10">
+                    <div class="h-48 bg-gradient-to-r from-blue-900 to-indigo-900 flex items-center justify-center">
+                        <i class="fas fa-file-alt text-6xl text-white opacity-30"></i>
+                    </div>
+                    <div class="p-6">
+                        <span class="inline-block px-3 py-1 text-xs font-semibold bg-blue-900 text-blue-200 rounded-full mb-3">White Paper</span>
+                        <h3 class="text-xl font-bold mb-2">"Blockchain in Healthcare"</h3>
+                        <p class="text-gray-400 mb-4">A comprehensive 50-page white paper for a health tech startup that secured $8M in Series A funding.</p>
+                        <div class="flex items-center">
+                            <span class="text-sm text-gray-500">Confidential Client</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 3 -->
+                <div class="bg-gray-800 rounded-2xl overflow-hidden transition duration-500 hover:shadow-xl hover:shadow-pink-500/10">
+                    <div class="h-48 bg-gradient-to-r from-pink-900 to-purple-900 flex items-center justify-center">
+                        <i class="fas fa-microphone text-6xl text-white opacity-30"></i>
+                    </div>
+                    <div class="p-6">
+                        <span class="inline-block px-3 py-1 text-xs font-semibold bg-pink-900 text-pink-200 rounded-full mb-3">Speech</span>
+                        <h3 class="text-xl font-bold mb-2">TEDx Talk Script</h3>
+                        <p class="text-gray-400 mb-4">A powerful TEDx talk on "The Future of Human-AI Collaboration" that garnered 2M+ views online.</p>
+                        <div class="flex items-center">
+                            <span class="text-sm text-gray-500">TEDx Speaker</span>
+                            <span class="mx-2 text-gray-600">•</span>
+                            <div class="flex">
+                                <i class="fas fa-star text-yellow-400 text-sm"></i>
+                                <i class="fas fa-star text-yellow-400 text-sm"></i>
+                                <i class="fas fa-star text-yellow-400 text-sm"></i>
+                                <i class="fas fa-star text-yellow-400 text-sm"></i>
+                                <i class="fas fa-star text-yellow-400 text-sm"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="https://www.ghostwriter.business/portfolio" class="inline-flex items-center text-purple-500 hover:text-purple-400 font-medium">
+                    View Full Portfolio
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <span class="text-purple-500 font-semibold">HOW IT WORKS</span>
+            <h2 class="text-3xl md:text-5xl font-bold mt-4 mb-6">My <span class="gradient-text">Process</span></h2>
+            <p class="text-lg text-gray-400 max-w-3xl mx-auto">
+                A structured approach to ensure your project exceeds expectations while maintaining complete confidentiality.
+            </p>
+        </div>
+        
+        <div class="relative">
+            <!-- Timeline line -->
+            <div class="hidden md:block absolute left-1/2 h-full w-0.5 bg-gradient-to-b from-purple-500 to-blue-500 transform -translate-x-1/2"></div>
+            
+            <!-- Process Steps -->
+            <div class="space-y-12 md:space-y-0">
+                <!-- Step 1 -->
+                <div class="relative flex flex-col md:flex-row items-center md:even:flex-row-reverse">
+                    <div class="flex-1 md:px-12 mb-8 md:mb-0">
+                        <div class="bg-gray-800 bg-opacity-50 rounded-2xl p-8 border border-gray-700">
+                            <span class="inline-block px-3 py-1 text-xs font-semibold bg-purple-900 text-purple-200 rounded-full mb-4">Step 1</span>
+                            <h3 class="text-2xl font-bold mb-4">Discovery & Planning</h3>
+                            <p class="text-gray-400">
+                                We'll start with an in-depth consultation to understand your vision, goals, and audience. I'll ask probing questions to capture your unique voice and perspective.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w-16 h-16 rounded-full bg-purple-600 flex items-center justify-center text-white text-xl font-bold relative z-10 mx-auto md:mx-0">
+                        1
+                    </div>
+                    <div class="flex-1 md:px-12 hidden md:block"></div>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="relative flex flex-col md:flex-row items-center md:even:flex-row-reverse">
+                    <div class="flex-1 md:px-12 hidden md:block"></div>
+                    <div class="w-16 h-16 rounded-full bg-blue-500 flex items-center justify-center text-white text-xl font-bold relative z-10 mx-auto md:mx-0">
+                        2
+                    </div>
+                    <div class="flex-1 md:px-12 mb-8 md:mb-0">
+                        <div class="bg-gray-800 bg-opacity-50 rounded-2xl p-8 border border-gray-700">
+                            <span class="inline-block px-3 py-1 text-xs font-semibold bg-blue-900 text-blue-200 rounded-full mb-4">Step 2</span>
+                            <h3 class="text-2xl font-bold mb-4">Research & Development</h3>
+                            <p class="text-gray-400">
+                                I conduct thorough research, compile resources, and develop a detailed outline for your approval. This phase may include interviews with you or subject matter experts.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="relative flex flex-col md:flex-row items-center md:even:flex-row-reverse">
+                    <div class="flex-1 md:px-12 mb-8 md:mb-0">
+                        <div class="bg-gray-800 bg-opacity-50 rounded-2xl p-8 border border-gray-700">
+                            <span class="inline-block px-3 py-1 text-xs font-semibold bg-pink-900 text-pink-200 rounded-full mb-4">Step 3</span>
+                            <h3 class="text-2xl font-bold mb-4">Writing & Review</h3>
+                            <p class="text-gray-400">
+                                I craft the content in your voice, submitting chapters or sections for your feedback. We'll refine through multiple iterations until it perfectly matches your vision.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w-16 h-16 rounded-full bg-pink-500 flex items-center justify-center text-white text-xl font-bold relative z-10 mx-auto md:mx-0">
+                        3
+                    </div>
+                    <div class="flex-1 md:px-12 hidden md:block"></div>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="relative flex flex-col md:flex-row items-center md:even:flex-row-reverse">
+                    <div class="flex-1 md:px-12 hidden md:block"></div>
+                    <div class="w-16 h-16 rounded-full bg-indigo-500 flex items-center justify-center text-white text-xl font-bold relative z-10 mx-auto md:mx-0">
+                        4
+                    </div>
+                    <div class="flex-1 md:px-12">
+                        <div class="bg-gray-800 bg-opacity-50 rounded-2xl p-8 border border-gray-700">
+                            <span class="inline-block px-3 py-1 text-xs font-semibold bg-indigo-900 text-indigo-200 rounded-full mb-4">Step 4</span>
+                            <h3 class="text-2xl font-bold mb-4">Finalization & Delivery</h3>
+                            <p class="text-gray-400">
+                                After final approvals, I deliver the polished manuscript or content in your preferred format. Your project is now ready for publication or implementation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-gray-900 bg-opacity-50 parallax" style="background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80')">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-purple-500 font-semibold">CLIENT LOVE</span>
+                <h2 class="text-3xl md:text-5xl font-bold mt-4 mb-6">What Clients <span class="gradient-text">Say</span></h2>
+                <p class="text-lg text-gray-300 max-w-3xl mx-auto">
+                    Don't just take my word for it - here's what my clients have to say about working with me.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-800 bg-opacity-80 rounded-2xl p-8 border border-gray-700 backdrop-blur-sm">
+                    <div class="flex items-center mb-6">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah J." class="w-14 h-14 rounded-full border-2 border-purple-500">
+                        <div class="ml-4">
+                            <h4 class="font-bold">Sarah J.</h4>
+                            <p class="text-sm text-gray-400">CEO, TechStart Inc.</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-300 mb-6">
+                        "Working with Ghostwriter Business was transformative. They captured my voice so perfectly that reading my book felt like listening to my own thoughts - only more eloquent and structured. Our book became a Wall Street Journal bestseller!"
+                    </p>
+                    <div class="flex items-center text-sm text-gray-400">
+                        <i class="fas fa-book mr-2"></i>
+                        <span>Business Book Ghostwriting</span>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-800 bg-opacity-80 rounded-2xl p-8 border border-gray-700 backdrop-blur-sm">
+                    <div class="flex items-center mb-6">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael T." class="w-14 h-14 rounded-full border-2 border-blue-500">
+                        <div class="ml-4">
+                            <h4 class="font-bold">Michael T.</h4>
+                            <p class="text-sm text-gray-400">Founder, NeuroTech</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-300 mb-6">
+                        "The white paper Ghostwriter Business produced for our Series A funding round was instrumental in securing $12M in investments. They took complex neuroscience concepts and made them accessible without dumbing them down."
+                    </p>
+                    <div class="flex items-center text-sm text-gray-400">
+                        <i class="fas fa-file-alt mr-2"></i>
+                        <span>Technical White Paper</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <a href="https://www.ghostwriter.business/testimonials" class="inline-flex items-center text-purple-500 hover:text-purple-400 font-medium">
+                    Read More Testimonials
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto bg-gradient-to-r from-purple-900 to-blue-900 rounded-3xl p-12 text-center relative overflow-hidden">
+            <div class="absolute -top-20 -left-20 w-64 h-64 bg-purple-500 rounded-full filter blur-3xl opacity-20"></div>
+            <div class="absolute -bottom-20 -right-20 w-64 h-64 bg-blue-500 rounded-full filter blur-3xl opacity-20"></div>
+            <div class="relative z-10">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Launch Your <span class="gradient-text">Writing Project</span>?</h2>
+                <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+                    Whether you have a complete outline or just a spark of an idea, I can help transform it into compelling content that resonates with your audience.
+                </p>
+                <a href="#contact" class="inline-flex items-center bg-white text-gray-900 hover:bg-gray-200 px-8 py-4 rounded-full text-lg font-semibold transition duration-300">
+                    Get Started Today
+                    <i class="fas fa-arrow-right ml-3"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="text-purple-500 font-semibold">GET IN TOUCH</span>
+                <h2 class="text-3xl md:text-5xl font-bold mt-4 mb-6">Let's Create <span class="gradient-text">Something</span> Amazing</h2>
+                <p class="text-lg text-gray-400 mb-8">
+                    Have a project in mind? Fill out the form or reach out directly. I typically respond within 24 hours to discuss your ghostwriting needs.
+                </p>
+                
+                <div class="space-y-6">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 bg-purple-500 bg-opacity-20 p-3 rounded-lg">
+                            <i class="fas fa-envelope text-purple-500 text-xl"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-semibold text-white">Email Me</h3>
+                            <a href="mailto:contact@ghostwriter.business" class="text-purple-400 hover:text-purple-300">contact@ghostwriter.business</a>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 bg-blue-500 bg-opacity-20 p-3 rounded-lg">
+                            <i class="fas fa-calendar-alt text-blue-400 text-xl"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-semibold text-white">Schedule a Call</h3>
+                            <a href="https://calendly.com/Ghostwriter Business" target="_blank" class="text-blue-400 hover:text-blue-300">Book a free 30-minute consultation</a>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 bg-pink-500 bg-opacity-20 p-3 rounded-lg">
+                            <i class="fas fa-globe text-pink-400 text-xl"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-semibold text-white">Visit My Website</h3>
+                            <a href="https://www.ghostwriter.business" target="_blank" class="text-pink-400 hover:text-pink-300">www.ghostwriter.business</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-gray-800 bg-opacity-50 rounded-2xl p-8 border border-gray-700">
+                <form id="contact-form" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-400 mb-2">Your Name</label>
+                        <input type="text" id="name" name="name" required class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-white placeholder-gray-500">
+                    </div>
+                    
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-400 mb-2">Email Address</label>
+                        <input type="email" id="email" name="email" required class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-white placeholder-gray-500">
+                    </div>
+                    
+                    <div>
+                        <label for="project" class="block text-sm font-medium text-gray-400 mb-2">Project Type</label>
+                        <select id="project" name="project" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-white">
+                            <option value="">Select a project type</option>
+                            <option value="book">Book Ghostwriting</option>
+                            <option value="business">Business Content</option>
+                            <option value="speech">Speech/Script Writing</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-400 mb-2">Tell Me About Your Project</label>
+                        <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-white placeholder-gray-500"></textarea>
+                    </div>
+                    
+                    <div>
+                        <button type="submit" class="w-full bg-purple-600 hover:bg-purple-700 text-white px-6 py-4 rounded-lg text-lg font-semibold transition duration-300">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+        <div class="text-center mb-16">
+            <span class="text-purple-500 font-semibold">HAVE QUESTIONS?</span>
+            <h2 class="text-3xl md:text-5xl font-bold mt-4 mb-6">Frequently Asked <span class="gradient-text">Questions</span></h2>
+        </div>
+        
+        <div class="space-y-6">
+            <!-- FAQ Item 1 -->
+            <div class="bg-gray-800 bg-opacity-50 rounded-2xl p-6 border border-gray-700">
+                <button class="faq-toggle w-full flex justify-between items-center text-left">
+                    <h3 class="text-xl font-semibold">How does ghostwriting work?</h3>
+                    <i class="fas fa-chevron-down text-purple-500 transition-transform duration-300"></i>
+                </button>
+                <div class="faq-content mt-4 hidden">
+                    <p class="text-gray-400">
+                        Ghostwriting is a collaborative process where I write content on your behalf, in your voice. You provide the ideas, expertise, and direction, and I craft the words to bring your vision to life. The final work is published under your name, with all rights transferred to you upon completion.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- FAQ Item 2 -->
+            <div class="bg-gray-800 bg-opacity-50 rounded-2xl p-6 border border-gray-700">
+                <button class="faq-toggle w-full flex justify-between items-center text-left">
+                    <h3 class="text-xl font-semibold">Will my project remain confidential?</h3>
+                    <i class="fas fa-chevron-down text-purple-500 transition-transform duration-300"></i>
+                </button>
+                <div class="faq-content mt-4 hidden">
+                    <p class="text-gray-400">
+                        Absolutely. Confidentiality is the cornerstone of professional ghostwriting. I sign NDAs for all projects and never disclose my involvement unless you choose to do so. Your ideas and content remain completely yours.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- FAQ Item 3 -->
+            <div class="bg-gray-800 bg-opacity-50 rounded-2xl p-6 border border-gray-700">
+                <button class="faq-toggle w-full flex justify-between items-center text-left">
+                    <h3 class="text-xl font-semibold">What's your typical turnaround time?</h3>
+                    <i class="fas fa-chevron-down text-purple-500 transition-transform duration-300"></i>
+                </button>
+                <div class="faq-content mt-4 hidden">
+                    <p class="text-gray-400">
+                        Turnaround times vary based on project scope. A full-length book (60k words) typically takes 3-6 months from outline to final manuscript. Smaller projects like white papers or speeches can be completed in 2-4 weeks. Rush services are available for an additional fee.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- FAQ Item 4 -->
+            <div class="bg-gray-800 bg-opacity-50 rounded-2xl p-6 border border-gray-700">
+                <button class="faq-toggle w-full flex justify-between items-center text-left">
+                    <h3 class="text-xl font-semibold">Do you offer revisions?</h3>
+                    <i class="fas fa-chevron-down text-purple-500 transition-transform duration-300"></i>
+                </button>
+                <div class="faq-content mt-4 hidden">
+                    <p class="text-gray-400">
+                        Yes, all projects include 2 rounds of revisions at no additional cost. Additional revisions can be accommodated for a fee. My goal is to ensure you're completely satisfied with the final product.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- FAQ Item 5 -->
+            <div class="bg-gray-800 bg-opacity-50 rounded-2xl p-6 border border-gray-700">
+                <button class="faq-toggle w-full flex justify-between items-center text-left">
+                    <h3 class="text-xl font-semibold">How do you charge for projects?</h3>
+                    <i class="fas fa-chevron-down text-purple-500 transition-transform duration-300"></i>
+                </button>
+                <div class="faq-content mt-4 hidden">
+                    <p class="text-gray-400">
+                        Pricing depends on project type, length, complexity, and timeline. Book projects are typically quoted as flat fees, while business content is often priced per word. I require a 50% deposit to begin work, with the balance due upon completion before final files are delivered.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mt-12 text-center">
+            <p class="text-gray-400 mb-6">Still have questions?</p>
+            <a href="mailto:contact@ghostwriter.business" class="inline-flex items-center text-purple-500 hover:text-purple-400 font-medium text-lg">
+                <i class="fas fa-envelope mr-3"></i>
+                Email Me Directly
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div>
+                    <div class="flex items-center space-x-2 mb-6">
+                        <i class="fas fa-meteor text-purple-500 text-2xl"></i>
+                        <span class="text-white text-xl font-bold">Ghostwriter<span class="gradient-text">Ghost</span></span>
+                    </div>
+                    <p class="text-gray-400 mb-6">
+                        Premium ghostwriting services for authors, entrepreneurs, and thought leaders who want to make an impact with their words.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-white font-semibold text-lg mb-6">Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Book Ghostwriting</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Business Content</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Speech Writing</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Script Writing</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Editing Services</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-white font-semibold text-lg mb-6">Company</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Process</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Testimonials</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Portfolio</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-white font-semibold text-lg mb-6">Legal</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">NDA Agreement</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Copyright</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">
+                    &copy; 2025 Ghostwriter Business. All rights reserved.
+                </p>
+                <div class="flex space-x-6">
+                    <a href="https://www.ghostwriter.business" class="text-gray-400 hover:text-white">www.ghostwriter.business</a>
+                    <a href="mailto:contact@ghostwriter.business" class="text-gray-400 hover:text-white">contact@ghostwriter.business</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // FAQ toggle functionality
+        document.querySelectorAll('.faq-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqContent = button.nextElementSibling;
+                const icon = button.querySelector('i');
+                
+                faqContent.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+
+        // Form submission
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const project = document.getElementById('project').value;
+            const message = document.getElementById('message').value;
+            
+            // Here you would typically send this data to your server
+            // For now, we'll just show an alert
+            alert(`Thank you, ${name}! Your message has been received. I'll get back to you soon at ${email}.`);
+            
+            // Reset form
+            this.reset();
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+<p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">Made with <img src="https://enzostvs-deepsite.hf.space/logo.svg" alt="DeepSite Logo" style="width: 16px; height: 16px; vertical-align: middle;display:inline-block;margin-right:3px;filter:brightness(0) invert(1);"><a href="https://enzostvs-deepsite.hf.space" style="color: #fff;text-decoration: underline;" target="_blank" >DeepSite</a> - 🧬 <a href="https://enzostvs-deepsite.hf.space?remix=GhostwriterBusiness/www-ghostwriter-business" style="color: #fff;text-decoration: underline;" target="_blank" >Remix</a></p></body>
+</html>
